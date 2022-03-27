@@ -44,11 +44,14 @@
 		out_msg=out_msg+"Message received Topic "+r_message.destinationName;
 		//console.log("Message received ",r_message.payloadString);
 		console.log(out_msg);
-		document.getElementById("messages").innerHTML =out_msg;
+		
 
         loc_msg = JSON.parse(r_message.payloadString);
         if(loc_msg['name'] != null && loc_msg['name'] == "NewFeatureType"){
+            document.getElementById("messages").innerHTML = loc_msg['features'][0]['geometry']['coordinates'][0];
             geoJsonLocation(loc_msg);
+        }else{
+            document.getElementById("messages").innerHTML =out_msg;
         }
         
 
