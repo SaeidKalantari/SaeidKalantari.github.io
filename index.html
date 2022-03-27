@@ -252,7 +252,7 @@
                         <div id="status">Connection Status: Not Connected</div>
                         
                         <br>
-                            <form name="connform" action="" onsubmit="return MQTTconnect()">
+                            <form name="connform" action="#" onsubmit="return MQTTconnect()">
                         
                         Server:  <input class="input is-large" type="text" name="server"><br><br>
                         Port:    <input class="input is-large" type="text" name="port"><br><br>
@@ -260,13 +260,13 @@
                         <input class="button is-block is-danger is-large is-fullwidth" TYPE="button" name="discon " value="DisConnect" onclick="disconnect()">
                         </form>
                         <hr>
-                        <form name="subs" action="" onsubmit="return sub_topics()">
+                        <form name="subs" action="#" onsubmit="return sub_topics()">
                         Subscribe Topic:   <input class="input is-large" type="text" name="Stopic"><br><br>
                         
                         <input class="button is-block is-info is-large is-fullwidth" type="submit" value="Subscribe">
                         </form> 
                         <hr>
-                        <form name="smessage" action="" onsubmit="return send_message()">
+                        <form name="smessage" action="#" onsubmit="return send_message()">
                         
                         Message: <input class="input is-large" type="text" name="message"><br><br>
                         Publish Topic:   <input class="input is-large" type="text" name="Ptopic"><br><br>
