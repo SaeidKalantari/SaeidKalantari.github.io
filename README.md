@@ -32,7 +32,7 @@ If you navigate to the project folder and run "http-server" in the terminal, you
 I used Bulma open source CSS framework for this project to make the website look nicer.
 
 ### JS
-map_styled.js: This is the main js script for loading the LeafLet map.
+map_style.js: This is the main js script for loading the LeafLet map.
 ### MQTT
 MQTT stands for Message Queuing Telemetry Transport which is known as one of the most used protocols in IoT networks. MQTT is designed to enable Machine to Machine communication in a publish/subscribe architecture. You will no longer need to stack your messages in the queue and wait for a response to send other messages to a server. MQTT is a lightweight protocol that is able to work in low-bandwidth networks as well as networks with various latency levels. One of the most popular applications of MQTT is to get the latest changes of devices/sensors' status and visualize them on a web client application. In this project, you will get the latest location of your device by MQTT protocol and visualize it on the map.
 ### Leaflet
