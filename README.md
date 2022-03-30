@@ -10,6 +10,7 @@ The goal of Lab 4 is to:
    * [Introduction](#introduction)
       * [Pages](#pages)
       * [CSS](#css)
+      * [JS](#JS)
       * [MQTT](#MQTT)
       * [Leaflet](#Leaflet)
       * [Geolocation Javascript API](#GeolocationJavascriptAPI)
@@ -25,9 +26,13 @@ My name is Saeid Kalantari, and in this project, we’ll build a simple web appl
 ### Pages
 There are a main page in this project: 1. index.html (Home)
 If you navigate to the project folder and run "http-server" in the terminal, you can access the website at http://localhost:8080. I pushed the finished version of this project to github.com. You can access it using this link: https://saeidkalantari.github.io/
+1. index.html (Home): this page is just a landing page, and you can see the map and building permits.
 
 ### CSS
-There is a "main.css" file in the CSS folder that holds more than five different CSS properties and different types of CSS selectors. I used the #id selector and the .class selector in this file. Also, it includes one mobile-responsive @media query, such that something about the styling changes for smaller screens.
+I used Bulma open source CSS framework for this project to make the website look nicer.
+
+### JS
+map_styled.js: This is the main js script for loading the LeafLet map.
 ### MQTT
 MQTT stands for Message Queuing Telemetry Transport which is known as one of the most used protocols in IoT networks. MQTT is designed to enable Machine to Machine communication in a publish/subscribe architecture. You will no longer need to stack your messages in the queue and wait for a response to send other messages to a server. MQTT is a lightweight protocol that is able to work in low-bandwidth networks as well as networks with various latency levels. One of the most popular applications of MQTT is to get the latest changes of devices/sensors' status and visualize them on a web client application. In this project, you will get the latest location of your device by MQTT protocol and visualize it on the map.
 ### Leaflet
