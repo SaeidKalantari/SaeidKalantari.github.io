@@ -12,7 +12,7 @@ The goal of Lab 4 is to:
       * [CSS](#css)
       * [MQTT](#MQTT)
       * [Leaflet](#Leaflet)
-      * [Geolocation Javascript API](#GeolocationJavascriptAPI)
+      * [Geolocation Javascript API](#Geolocation Javascript API)
    * [Imports](#Imports)
       * [Links](#links)
       * [Scripts](#Scripts)
@@ -34,7 +34,6 @@ MQTT stands for Message Queuing Telemetry Transport which is known as one of the
 For this project, you’ll need to use Leaflet.js as the JavaScript library for interactive maps. Leaflet is one of the most popular web mapping APIs.
 ### Geolocation Javascript API
 From Mozilla.org, “the Geolocation API allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.” You can learn more about it here: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
-
 
 ## Imports
 In this project, I used links and scripts to change the UI and UX of the web pages and showing the map.
