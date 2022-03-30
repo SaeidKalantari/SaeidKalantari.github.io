@@ -12,7 +12,7 @@ The goal of Lab 4 is to:
       * [CSS](#css)
       * [MQTT](#MQTT)
       * [Leaflet](#Leaflet)
-      * [Geolocation Javascript API](#Geolocation Javascript API)
+      * [Geolocation Javascript API](#GeolocationJavascriptAPI)
    * [Imports](#Imports)
       * [Links](#links)
       * [Scripts](#Scripts)
@@ -32,7 +32,7 @@ There is a "main.css" file in the CSS folder that holds more than five different
 MQTT stands for Message Queuing Telemetry Transport which is known as one of the most used protocols in IoT networks. MQTT is designed to enable Machine to Machine communication in a publish/subscribe architecture. You will no longer need to stack your messages in the queue and wait for a response to send other messages to a server. MQTT is a lightweight protocol that is able to work in low-bandwidth networks as well as networks with various latency levels. One of the most popular applications of MQTT is to get the latest changes of devices/sensors' status and visualize them on a web client application. In this project, you will get the latest location of your device by MQTT protocol and visualize it on the map.
 ### Leaflet
 For this project, you’ll need to use Leaflet.js as the JavaScript library for interactive maps. Leaflet is one of the most popular web mapping APIs.
-### Geolocation Javascript API
+### GeolocationJavascriptAPI
 From Mozilla.org, “the Geolocation API allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.” You can learn more about it here: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
 
 ## Imports
