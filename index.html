@@ -31,8 +31,11 @@
 	document.getElementById("status").innerHTML = "Connection Lost";
 	document.getElementById("messages").innerHTML ="Connection Lost";
 	connected_flag=0;
-    document.getElementById("messages").innerHTML = "Connection Lost- Retrying";
-    setTimeout(MQTTconnect, reconnectTimeout);
+    if(disconnected_flag==0){
+        document.getElementById("messages").innerHTML = "Connection Lost- Retrying";
+        setTimeout(MQTTconnect, reconnectTimeout);
+    }
+
 	}
 	function onFailure(message) {
 		console.log("Failed");
@@ -72,10 +75,16 @@
 	  }
     function disconnect()
     {
+        disconnected_flag=1;
     if (connected_flag==1)
         mqtt.disconnect();
+        document.getElementById('server-id').disabled = false;
+        document.getElementById('port-id').disabled = false;
     }
     function MQTTconnect() {
+        disconnected_flag=0;
+    document.getElementById('server-id').disabled = true;
+    document.getElementById('port-id').disabled = true;
 	document.getElementById("messages").innerHTML ="";
 	var s = document.forms["connform"]["server"].value;
 	var p = document.forms["connform"]["port"].value;
@@ -258,8 +267,8 @@
                         <br>
                             <form name="connform" action="" onsubmit="return MQTTconnect()">
                         
-                        Server:  <input class="input is-large" type="text" name="server"><br><br>
-                        Port:    <input class="input is-large" type="text" name="port"><br><br>
+                        Server:  <input id="server-id" class="input is-large" type="text" name="server"><br><br>
+                        Port:    <input id="port-id" class="input is-large" type="text" name="port"><br><br>
                         <input class="button is-block is-success is-large is-fullwidth" style="margin-bottom: 5px;" type="submit" value="Connect">
                         <input class="button is-block is-danger is-large is-fullwidth" TYPE="button" name="discon " value="DisConnect" onclick="disconnect()">
                         </form>
