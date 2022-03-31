@@ -47,16 +47,17 @@
 		out_msg=out_msg+"Message received Topic "+r_message.destinationName;
 		//console.log("Message received ",r_message.payloadString);
 		console.log(out_msg);
-		
-
-        loc_msg = JSON.parse(r_message.payloadString);
-        if(loc_msg['name'] != null && loc_msg['name'] == "NewFeatureType"){
-            document.getElementById("messages").innerHTML = loc_msg['features'][0]['geometry']['coordinates'][0];
-            geoJsonLocation(loc_msg);
+		console.log(r_message.payloadString.substr(0,7));
+        console.log('{"name":"');
+        if(r_message.payloadString.substr(0,9) == '{"name":"'){
+            loc_msg = JSON.parse(r_message.payloadString);
+            if(loc_msg['name'] != null && loc_msg['name'] == "NewFeatureType"){
+                document.getElementById("messages").innerHTML = loc_msg['features'][0]['geometry']['coordinates'][0];
+                geoJsonLocation(loc_msg);
+            }
         }else{
-            document.getElementById("messages").innerHTML =out_msg;
+                document.getElementById("messages").innerHTML =out_msg;
         }
-        
 
 		}
 	function onConnected(recon,url){
@@ -168,8 +169,9 @@
             const longitude = position.coords.longitude;
 
             status.textContent = '';
-            location.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
             var temperture = Math.floor(Math.random() * 101) - 40;
+            location.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} ° - Temperture: ${temperture} °C`;
+            
             pinLocation(latitude, longitude,temperture);
            
             
